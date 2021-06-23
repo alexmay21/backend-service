@@ -1,6 +1,10 @@
-# backend-service for todos app
+# backend-service
+A backend service for a To-do App.
 
-## How to setup
+## Get started
+There are multiple ways of running backend-service.
+
+### Build from source
 - Build the image using docker.
 ```
 docker build -t todos-backend-service:0.0.1 .
@@ -10,3 +14,6 @@ docker build -t todos-backend-service:0.0.1 .
 docker run -d -p 8080:8080 todos-backend-service:0.0.1
 ```
 - View the Swagger API document on http://localhost:8080/api/swagger-ui.html
+
+### Or just run with uploaded image
+- ```docker run -d -p 8080:8080 meileim/todos-backend-service:0.0.1```
