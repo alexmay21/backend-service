@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-service-deployment
+  namespace: default
+  labels:
+    app: backend-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-service
+  template:
+    metadata:
+      labels:
+        app: backend-service
+    spec:
+      containers:
+        - name: backend-service
+          image: meileim/todos-backend-service:0.0.1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: spring.profiles.active
+              value: dev
