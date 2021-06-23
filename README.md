@@ -5,6 +5,10 @@ A backend service for a To-do App.
 There are multiple ways of running backend-service.
 
 ### Build from source
+- Build the project
+```
+mvn -Dmaven.test.skip=true clean install
+```
 - Build the image using docker.
 ```
 docker build -t todos-backend-service:0.0.1 .
